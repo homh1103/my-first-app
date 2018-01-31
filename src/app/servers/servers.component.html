@@ -16,5 +16,19 @@
 <hr>
 
 <p>{{servidorStatus}}</p>
-<p [innerText]="permitirCrear"></p>
+
+<!-- <p [innerText]="permitirCrear"></p> -->
 <p>{{permitirCrear}}</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <app-server *ngFor="let server of servers"></app-server>
+    </div>
+  </div>
+  <!-- <div class="row">
+    <div class="col-xs-12">
+      <app-server></app-server>
+    </div>
+  </div> -->
+</div>
