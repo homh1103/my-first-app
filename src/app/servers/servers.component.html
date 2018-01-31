@@ -1,0 +1,20 @@
+<!-- <app-server></app-server> -->
+<!-- <app-server></app-server> -->
+
+<!-- <input type="text" class="form-control"
+  (input)="actualizarNombreServer($event)"> -->
+
+  <input type="text" class="form-control"
+    [(ngModel)]="servidorNombre">
+
+<p>{{servidorNombre}}</p>
+
+<button class="btn btn-primary" [disabled]="!permitirCrear" (click)="crearServidor()">Agregar</button>
+
+<p *ngIf="servidorCreado">Se crea el servidor {{servidorNombre}}</p>
+
+<hr>
+
+<p>{{servidorStatus}}</p>
+<p [innerText]="permitirCrear"></p>
+<p>{{permitirCrear}}</p>
